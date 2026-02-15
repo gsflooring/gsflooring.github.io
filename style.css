@@ -1,0 +1,292 @@
+/*
+ * CSS styles for GS Flooring website
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;900&display=swap');
+
+body {
+    background-color: black;
+    color: yellow;
+    font-family: 'Oswald', 'Arial Black', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: all 0.3s ease, transform 0.4s ease;
+    transform: translateY(0);
+}
+
+header.scrolled {
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.2);
+    padding: 10px 20px;
+}
+
+/* Shimmer animation for header */
+@keyframes shimmer {
+    0% {
+        background: linear-gradient(90deg, transparent, transparent, rgba(255, 255, 0, 0.3), transparent, transparent);
+        background-position: -1000px 0;
+    }
+    50% {
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 0, 0.5), rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0.5), transparent);
+        background-position: 1000px 0;
+    }
+    100% {
+        background: linear-gradient(90deg, transparent, transparent, rgba(255, 255, 0, 0.3), transparent, transparent);
+        background-position: -1000px 0;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 25px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+nav {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 51;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    background-color: yellow;
+    color: black;
+    transform: scale(1.05);
+}
+
+nav ul li a.active {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 0, 0.1));
+    padding: 100px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+main h2 {
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+main h3 {
+    font-weight: 900;
+    font-size: 1.8em;
+    letter-spacing: 0.5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+main p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Animated Gradient Keyframes */
+@keyframes gradientShift1 {
+    0% {
+        background: linear-gradient(135deg, rgba(255, 255, 0, 0.15) 0%, rgba(255, 255, 0, 0.05) 100%);
+    }
+    50% {
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.25) 0%, rgba(255, 255, 0, 0.1) 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(255, 255, 0, 0.15) 0%, rgba(255, 255, 0, 0.05) 100%);
+    }
+}
+
+@keyframes gradientShift2 {
+    0% {
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0.08) 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(255, 255, 0, 0.3) 0%, rgba(255, 255, 0, 0.12) 100%);
+    }
+    100% {
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0.08) 100%);
+    }
+}
+
+@keyframes gradientShift3 {
+    0% {
+        background: linear-gradient(225deg, rgba(255, 255, 0, 0.18) 0%, rgba(255, 255, 0, 0.06) 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, rgba(255, 255, 0, 0.28) 0%, rgba(255, 255, 0, 0.1) 100%);
+    }
+    100% {
+        background: linear-gradient(225deg, rgba(255, 255, 0, 0.18) 0%, rgba(255, 255, 0, 0.06) 100%);
+    }
+}
+
+/* Product Grid Styles */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.product-card {
+    border: 3px solid yellow;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Stagger animations for each card */
+.product-card:nth-child(1) {
+    animation: gradientShift1 6s ease-in-out infinite;
+}
+
+.product-card:nth-child(2) {
+    animation: gradientShift2 6s ease-in-out infinite 0.5s;
+}
+
+.product-card:nth-child(3) {
+    animation: gradientShift3 6s ease-in-out infinite 1s;
+}
+
+.product-card:nth-child(4) {
+    animation: gradientShift1 6s ease-in-out infinite 1.5s;
+}
+
+.product-card:nth-child(5) {
+    animation: gradientShift2 6s ease-in-out infinite 2s;
+}
+
+.product-card:nth-child(6) {
+    animation: gradientShift3 6s ease-in-out infinite 2.5s;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(255, 255, 0, 0.4);
+    border-color: #ffff00;
+}
+
+.product-card h3 {
+    color: yellow;
+    font-size: 1.8em;
+    margin: 0 0 15px 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.product-card p {
+    color: yellow;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Particle Canvas Styles */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 3px solid yellow;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+}
