@@ -3,77 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - GS Flooring</title>
+
+    <!-- Primary SEO -->
+    <title>About Gary Stephenson — GS Flooring | Worcestershire</title>
+    <meta name="description" content="Learn about Gary Stephenson and GS Flooring. With 40+ years of experience rooted in Kidderminster's carpet heritage, Gary brings passion and precision to every floor in Worcestershire.">
+    <meta name="keywords" content="Gary Stephenson flooring, GS Flooring about, Kidderminster carpet heritage, flooring expert Worcestershire, Upton upon Severn">
+    <meta name="author" content="Gary Stephenson, GS Flooring">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gsflooring.github.io/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gsflooring.github.io/about.html">
+    <meta property="og:title" content="About Gary Stephenson — GS Flooring">
+    <meta property="og:description" content="Over 40 years of flooring expertise rooted in Kidderminster's proud carpet-making heritage. Based in Upton upon Severn, Worcestershire.">
+    <meta property="og:site_name" content="GS Flooring">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About GS Flooring">
+    <meta name="twitter:description" content="Over 40 years of flooring expertise. Based in Upton upon Severn, serving Worcestershire and beyond.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background Canvas -->
-    <canvas id="particleCanvas"></canvas>
 
-    <!-- Header Section -->
-    <header>
-        <h1>GS Flooring</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Me</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="section-label">Our Story</span>
+            <h1 class="section-title" style="font-size: clamp(2.5rem,5vw,4.5rem);">Passion for <em>Perfect Floors</em></h1>
+            <p class="section-desc">Over four decades of craftsmanship, rooted in the world-famous flooring heritage of Kidderminster.</p>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>About GS Flooring</h2>
-        <p>Your trusted partner in quality flooring since 1985</p>
-    </section>
-
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>Who Am I</h2>
-            <p>GS Flooring is my creation. I am a flooring enthusiast from Kidderminster and now based in Upton-upon-Severn. With a passion for quality craftsmanship and exceptional service, I founded GS Flooring to bring premium flooring solutions to the community.</p>
-            
-            <!-- Kidderminster Carpets Heritage -->
-            <h3>Heritage</h3>
-            <p>Kidderminster has a storied legacy as a world-renowned carpet manufacturing hub. This rich heritage of textile excellence and craftsmanship has deeply influenced my approach to flooring. Just as Kidderminster became famous for producing the finest carpets, I am committed to delivering that same level of quality, attention to detail, and pride in craftsmanship to every project I undertake.</p>
-            
-            <!-- About Gary Section -->
-            <h3>About Gary Stephenson</h3>
-            <p>I am not just a flooring expert; I am also a soul music lover and classic scooter enthusiast. I share an appreciation for the iconic Lambretta scooters, which represent the same values that drive my business: style, quality, and reliability. When I am not helping customers find the perfect flooring solution, you can usually find me enjoying live music or out on my scooter.</p>
-
-            <!-- Company Values -->
-            <div class="products">
-                <div class="product-card">
-                    <h3>Quality</h3>
-                    <p>I source only the finest materials to ensure lasting durability</p>
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <span class="section-label">Who I Am</span>
+                    <h2 class="section-title">Meet <em>Gary Stephenson</em></h2>
+                    <p class="section-desc">I'm Gary — a flooring specialist from Kidderminster, now based in Upton upon Severn. I founded GS Flooring with a single purpose: to deliver exceptional flooring with the care and precision that every home and business deserves.</p>
+                    <p style="color:var(--text-muted);font-size:.95rem;margin-top:16px;line-height:1.75;">When I'm not on the tools, you'll find me enjoying live soul music or out on my classic Lambretta scooter — passions that reflect the same values I bring to my work: style, reliability, and lasting quality.</p>
                 </div>
-                
-                <div class="product-card">
-                    <h3>Expertise</h3>
-                    <p>My experience brings years of knowledge to every project</p>
-                </div>
-                
-                <div class="product-card">
-                    <h3>Customer Service</h3>
-                    <p>Your satisfaction is my top priority in every interaction</p>
+                <div class="quote-box">
+                    <blockquote>"I started in the flooring trade because I love the transformation — walking into a room once the floor is down and seeing how it completely changes the space. That feeling never gets old."</blockquote>
+                    <span class="quote-source">— Gary Stephenson, Founder</span>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 GS Flooring. All rights reserved.</p>
+    <!-- Heritage -->
+    <section class="section section-alt">
+        <div class="container">
+            <span class="section-label">Our Heritage</span>
+            <h2 class="section-title" style="max-width:640px;">Rooted in <em>Kidderminster's</em> Carpet Legacy</h2>
+            <p class="section-desc" style="margin-bottom:48px;">Kidderminster is renowned worldwide as a carpet-manufacturing hub — a town whose identity is woven from thread, pattern, and an unrelenting pursuit of quality. That heritage is the foundation on which GS Flooring is built.</p>
+            <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
+                <div class="card">
+                    <div class="card-icon">⭐</div>
+                    <h3>Quality</h3>
+                    <p>Only premium materials are used on every job — no shortcuts, no compromise on finish.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Expertise</h3>
+                    <p>Four decades of hands-on experience across residential and commercial projects throughout Worcestershire.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>Honest advice, transparent pricing, and a commitment to doing exactly what I say I'll do.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3>Customer First</h3>
+                    <p>Every project begins with listening — understanding your vision before a single floor board is laid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">How It Works</span>
+            <h2 class="section-title">A Simple, <em>Stress-Free</em> Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h4>Free Consultation</h4>
+                    <p>Get in touch by phone or the contact form. I'll discuss your project, take measurements, and offer honest advice.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h4>Clear Quote</h4>
+                    <p>You'll receive a detailed, transparent quote — no jargon, no hidden costs. Labour-only or supply-and-fit options available.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h4>Professional Installation</h4>
+                    <p>I arrive on time, work cleanly, and execute the installation to the highest standard.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <h4>Finished &amp; Proud</h4>
+                    <p>Your new floor is fully fitted, the space is left tidy, and the result speaks for itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Let's Work Together</span>
+            <h2 class="section-title">Ready for a <em>New Floor?</em></h2>
+            <p class="section-desc" style="margin:0 auto 36px;">Call or message me today for a free, no-obligation quote. Available 7 days a week.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+                <a href="tel:07890484465" class="btn btn-outline">07890 484465</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+                <p>Professional flooring installation across Worcestershire and beyond. Quality craftsmanship, honest service.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <address>
+                    Upton upon Severn<br>
+                    Worcestershire<br>
+                    <a href="tel:07890484465">07890 484465</a><br>
+                    <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 GS Flooring. All rights reserved.</span>
+            <span>Upton upon Severn, Worcestershire</span>
+        </div>
     </footer>
-    
-    <!-- Navigation Bar Script -->
-    <script src="navbar.js"></script>
-    
-    <!-- Particle Animation Script -->
-    <script src="particles.js"></script>
-</body>
 
+    <script src="navbar.js"></script>
+</body>
 </html>
+
+
 

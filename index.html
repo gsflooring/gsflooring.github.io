@@ -3,98 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Flooring</title>
+
+    <!-- Primary SEO -->
+    <title>GS Flooring — Professional Flooring Installation | Worcestershire</title>
+    <meta name="description" content="GS Flooring provides expert flooring installation across Worcestershire. Specialising in hardwood, LVT, Amtico, Karndean, carpet and vinyl. Call 07890 484465 for a free quote.">
+    <meta name="keywords" content="flooring installer Worcestershire, hardwood flooring, LVT flooring, Amtico, Karndean, carpet fitting, vinyl flooring, floor installation Upton upon Severn">
+    <meta name="author" content="Gary Stephenson, GS Flooring">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gsflooring.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gsflooring.github.io/">
+    <meta property="og:title" content="GS Flooring — Professional Flooring Installation | Worcestershire">
+    <meta property="og:description" content="Professional flooring installation across Worcestershire. Hardwood, LVT, Amtico, Karndean, carpet and vinyl. Free quotes available.">
+    <meta property="og:site_name" content="GS Flooring">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GS Flooring — Professional Flooring Installation">
+    <meta name="twitter:description" content="Professional flooring installation across Worcestershire. Free quotes available. Call 07890 484465.">
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GS Flooring",
+      "description": "Professional flooring installation across Worcestershire specialising in hardwood, LVT, Amtico, Karndean, carpet and vinyl.",
+      "telephone": "+447890484465",
+      "email": "garystephenson2007@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Upton upon Severn",
+        "addressRegion": "Worcestershire",
+        "addressCountry": "GB"
+      },
+      "areaServed": "Worcestershire",
+      "url": "https://gsflooring.github.io/",
+      "openingHours": "Mo-Su 08:00-18:00",
+      "priceRange": "££"
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background Canvas -->
-    <canvas id="particleCanvas"></canvas>
 
-    <!-- Header Section -->
-    <header>
-        <h1>GS Flooring</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <h2>Welcome to GS Flooring</h2>
-        <p>Providing high-quality flooring solutions for your home or business</p>
-        <p>Call now for a FREE Quote!</p>
-        <p>07890 484465</p>
+        <div>
+            <p class="hero-eyebrow">Worcestershire's Flooring Specialist</p>
+            <h1>Floors Laid with<br><em>Precision &amp; Pride</em></h1>
+            <p class="hero-subtitle">Over 40 years of expert flooring installation — from classic hardwood to luxury vinyl tiles, delivered with uncompromising craftsmanship.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+                <a href="services.html" class="btn btn-outline">View Services</a>
+            </div>
+            <div class="hero-phone">
+                <span>Call anytime</span>
+                <div class="hero-divider"></div>
+                <strong>07890 484465</strong>
+            </div>
+        </div>
     </section>
 
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>Premium Products</h2>
-            <p>I offer a wide range of flooring materials and supplies to meet all your needs</p>
-            
-            <!-- Products Grid -->
-            <div class="products">
-                <!-- Screed Product Card -->
-                <div class="product-card">
-                    <h3>Screed</h3>
-                    <p>High-quality cement screed for superior floor preparation and leveling</p>
+    <!-- Stats -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="stats-strip">
+                <div class="stat-item">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Years Experience</span>
                 </div>
-
-                <div class="product-card">
-                    <h3>Vinyl</h3>
-                    <p>Vinyl flooring options for more affordable solutions</p>
+                <div class="stat-item">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Flooring Types</span>
                 </div>
-                
-                <!-- Flooring Rods Product Card -->
-                <div class="product-card">
-                    <h3>Flooring Rods</h3>
-                    <p>Durable rods designed for optimal floor structure support and installation</p>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free Quotes</span>
                 </div>
-                
-                <!-- Adhesive Product Card -->
-                <div class="product-card">
-                    <h3>Adhesive</h3>
-                    <p>Strong bonding adhesives for permanent and secure flooring installation</p>
-                </div>
-                
-                <!-- Carpets Product Card -->
-                <div class="product-card">
-                    <h3>Carpets</h3>
-                    <p>Luxurious carpet options that provide comfort and durability</p>
-                </div>
-                
-                <!-- Hardwood Product Card -->
-                <div class="product-card">
-                    <h3>Hardwood</h3>
-                    <p>Premium hardwood flooring for timeless elegance and lasting beauty</p>
-                </div>
-                
-                <!-- LVT Product Card -->
-                <div class="product-card">
-                    <h3>LVT</h3>
-                    <p>Luxury Vinyl Tiles, easy-to-clean tile options for any room</p>
+                <div class="stat-item">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Days a Week</span>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 GS Flooring. All rights reserved.</p>
+    <!-- Materials -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">What We Offer</span>
+            <h2 class="section-title">Premium <em>Flooring Materials</em></h2>
+            <p class="section-desc">Supplying and fitting a comprehensive range of flooring options to suit every taste, room, and budget.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🪵</div>
+                    <h3>Hardwood</h3>
+                    <p>Timeless solid and engineered hardwood that adds warmth and lasting value to any space.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>LVT / Amtico / Karndean</h3>
+                    <p>Precision-laid luxury vinyl tiles. Waterproof, durable, and strikingly beautiful in any room.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧵</div>
+                    <h3>Carpet</h3>
+                    <p>Luxurious carpet options expertly fitted for comfort, warmth, and lasting style underfoot.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Vinyl</h3>
+                    <p>Practical, resilient, and stylish vinyl solutions for kitchens, bathrooms and high-traffic areas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Screed</h3>
+                    <p>High-quality cement screed for superior floor preparation, levelling, and underfloor heating systems.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔩</div>
+                    <h3>Accessories &amp; Adhesives</h3>
+                    <p>Flooring rods, trims, and professional-grade adhesives for a perfect, lasting finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <span class="section-label">Why GS Flooring</span>
+                    <h2 class="section-title">Craftsmanship You Can <em>Count On</em></h2>
+                    <p class="section-desc">Based in Upton upon Severn and rooted in the proud flooring heritage of Kidderminster, I bring decades of hands-on expertise to every project.</p>
+                    <ul class="values-list">
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">40+ Years of Experience</span>
+                                <span class="v-desc">A career built on quality — from residential homes to commercial spaces across Worcestershire.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">Supply or Fit Only</span>
+                                <span class="v-desc">I can supply materials, or work with materials you've already sourced — entirely your choice.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">Honest, Transparent Quotes</span>
+                                <span class="v-desc">No hidden costs. Your free quote is clear, detailed, and commitment-free.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">7 Days a Week</span>
+                                <span class="v-desc">Available Monday to Sunday, 8am–6pm, to fit around your schedule.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quote-box">
+                    <blockquote>"Kidderminster has a storied legacy as a world-renowned carpet manufacturing hub — and that same dedication to quality runs through everything I do at GS Flooring."</blockquote>
+                    <span class="quote-source">— Gary Stephenson, Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Ready to Start?</span>
+            <h2 class="section-title">Get Your Free, No-Obligation <em>Quote Today</em></h2>
+            <p class="section-desc" style="margin: 0 auto 36px;">Whether you know exactly what you want or need expert guidance, get in touch and I'll help you find the perfect flooring solution.</p>
+            <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+                <p>Professional flooring installation across Worcestershire and beyond. Quality craftsmanship, honest service.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <address>
+                    Upton upon Severn<br>
+                    Worcestershire<br>
+                    <a href="tel:07890484465">07890 484465</a><br>
+                    <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 GS Flooring. All rights reserved.</span>
+            <span>Upton upon Severn, Worcestershire</span>
+        </div>
     </footer>
-    
-    <!-- Navigation Bar Script -->
+
     <script src="navbar.js"></script>
-    
-    <!-- Particle Animation Script -->
-    <script src="particles.js"></script>
 </body>
 </html>
+
+
 
 
 

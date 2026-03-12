@@ -1,45 +1,42 @@
-/*
- * Navigation bar animation functionality
- */
+/* GS Flooring — Navigation */
 
-let lastScrollY = 0;
-const header = document.querySelector('header');
+const navbar   = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const navLinks  = document.getElementById('navLinks');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelectorAll('nav a');
-    
-    /* Add scroll event listener for navbar animation on scroll */
-    window.addEventListener('scroll', function() {
-        const currentScrollY = window.scrollY;
+// Sticky shadow on scroll
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
 
-        /* Hide header when scrolling down, show when scrolling up */
-        if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            /* Scrolling down */
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            /* Scrolling up */
-            header.style.transform = 'translateY(0)';
-        }
-
-        /* Add scroll class for styling changes */
-        if (currentScrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        lastScrollY = currentScrollY;
+// Mobile hamburger toggle
+if (navToggle) {
+    navToggle.addEventListener('click', function () {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
     });
-    
-    /* Add click animation for nav links */
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            navLinks.forEach(function(otherLink) {
-                otherLink.classList.remove('active');
-            });
-            this.classList.add('active');
-        });
+}
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('#navLinks a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
     });
+});
+
+// Close menu on outside click
+document.addEventListener('click', function (e) {
+    if (navLinks && navLinks.classList.contains('open') &&
+        !navbar.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+    }
 });
 

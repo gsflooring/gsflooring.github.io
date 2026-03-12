@@ -3,88 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - GS Flooring</title>
+
+    <!-- Primary SEO -->
+    <title>Contact &amp; Free Quote — GS Flooring | Worcestershire</title>
+    <meta name="description" content="Contact GS Flooring for a free, no-obligation quote. Call 07890 484465 or fill in the contact form. Serving Worcestershire and surrounding areas 7 days a week.">
+    <meta name="keywords" content="contact GS Flooring, free flooring quote Worcestershire, flooring estimate, call flooring installer">
+    <meta name="author" content="Gary Stephenson, GS Flooring">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gsflooring.github.io/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gsflooring.github.io/contact.html">
+    <meta property="og:title" content="Contact &amp; Free Quote — GS Flooring">
+    <meta property="og:description" content="Get your free flooring quote today. Call 07890 484465 or use the contact form. Serving Worcestershire 7 days a week.">
+    <meta property="og:site_name" content="GS Flooring">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact GS Flooring — Free Quote">
+    <meta name="twitter:description" content="Free, no-obligation flooring quotes across Worcestershire. Call 07890 484465.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background Canvas -->
-    <canvas id="particleCanvas"></canvas>
 
-    <!-- Header Section -->
-    <header>
-        <h1>GS Flooring</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active nav-cta">Free Quote</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="section-label">Get in Touch</span>
+            <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);">Request a <em>Free Quote</em></h1>
+            <p class="section-desc">Fill in the form or call directly — I'll get back to you promptly with honest advice and a clear price.</p>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Contact Me</h2>
-        <p>Get in touch with me today</p>
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Info -->
+                <aside>
+                    <span class="section-label">Contact Details</span>
+                    <h2 class="section-title" style="font-size:2rem;margin-bottom:32px;">Let's <em>Talk</em></h2>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:07890484465">07890 484465</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Upton upon Severn, Worcestershire</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Monday &ndash; Sunday, 8am &ndash; 6pm</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🗺️</div>
+                            <div>
+                                <h4>Service Area</h4>
+                                <p>Worcestershire and surrounding counties</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Contact Form -->
+                <div class="form-card">
+                    <div id="contactFormWrap">
+                        <h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--text);margin-bottom:8px;">Send a Message</h3>
+                        <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:28px;">I typically respond within a few hours. All quotes are free and completely no-obligation.</p>
+
+                        <!-- To activate: replace YOUR_FORM_ID with your Formspree endpoint -->
+                        <!-- Sign up free at https://formspree.io to get your form ID -->
+                        <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="07XXX XXXXXX" autocomplete="tel">
+                                </div>
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="service">Service Required</label>
+                                <select id="service" name="service">
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="hardwood">Hardwood Installation</option>
+                                    <option value="lvt">LVT / Amtico / Karndean</option>
+                                    <option value="carpet">Carpet Fitting</option>
+                                    <option value="vinyl">Vinyl Flooring</option>
+                                    <option value="laminate">Laminate Flooring</option>
+                                    <option value="screed">Screed &amp; Floor Prep</option>
+                                    <option value="repair">Floor Repair</option>
+                                    <option value="other">Other / Not Sure</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="location">Property Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g. Malvern, Worcestershire" autocomplete="address-level2">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your flooring project — room size, current flooring, any specific requirements..." required></textarea>
+                            </div>
+
+                            <!-- Honeypot spam prevention -->
+                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+                            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;">
+                                Send Message &amp; Request Quote
+                            </button>
+                            <p class="form-note">By submitting this form you agree to be contacted regarding your flooring enquiry.</p>
+                        </form>
+                    </div>
+
+                    <!-- Success message shown after submission -->
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✓</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for getting in touch. I'll review your enquiry and get back to you shortly — usually within a few hours.</p>
+                        <a href="index.html" class="btn btn-outline" style="margin-top:24px;">Back to Home</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>Get in Touch</h2>
-            <p>I would love to hear from you. Reach out using any of the methods below:</p>
-            
-            <!-- Contact Information Cards -->
-            <div class="products">
-                <!-- Email -->
-                <div class="product-card" onclick="window.location.href='mailto:garystephenson2007@gmail.com';" style="cursor: pointer;">
-                    <h3>Email</h3>
-                    <p>garystephenson2007@gmail.com</p>
-                    <p>I typically respond within 24 hours</p>
-                </div>
-                
-                <!-- Phone -->
-                <div class="product-card">
-                    <h3>Phone</h3>
-                    <p>07890 484465</p>
-                    <p>Call me during business hours for assistance</p>
-                </div>
-                
-                <!-- Location -->
-                <div class="product-card">
-                    <h3>Location</h3>
-                    <p>Upton Upon Severn</p>
-                    <p>Servicing Worcestershire and beyond</p>
-                </div>
-                
-                <!-- Hours -->
-                <div class="product-card">
-                    <h3>Business Hours</h3>
-                    <p>Monday - Sunday: 8am - 6pm</p>
-                </div>
-                
-                <!-- Quote Request -->
-                <div class="product-card">
-                    <h3>Free Quote</h3>
-                    <p>Request a free quote for any flooring project</p>
-                </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+                <p>Professional flooring installation across Worcestershire and beyond. Quality craftsmanship, honest service.</p>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 GS Flooring. All rights reserved.</p>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <address>
+                    Upton upon Severn<br>
+                    Worcestershire<br>
+                    <a href="tel:07890484465">07890 484465</a><br>
+                    <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 GS Flooring. All rights reserved.</span>
+            <span>Upton upon Severn, Worcestershire</span>
+        </div>
     </footer>
-    
-    <!-- Navigation Bar Script -->
-    <script src="navbar.js"></script>
-    
-    <!-- Particle Animation Script -->
-    <script src="particles.js"></script>
-</body>
 
+    <script src="navbar.js"></script>
+    <script>
+        const form = document.getElementById('quoteForm');
+        const wrap = document.getElementById('contactFormWrap');
+        const ok   = document.getElementById('formSuccess');
+        if (form) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const action = form.action;
+                if (action.includes('YOUR_FORM_ID')) {
+                    // Fallback: open default mail client
+                    const name = (document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value).trim();
+                    const msg  = document.getElementById('message').value;
+                    const mail = document.getElementById('email').value;
+                    window.location.href = 'mailto:garystephenson2007@gmail.com?subject=' + encodeURIComponent('Flooring Enquiry from ' + name) + '&body=' + encodeURIComponent(msg) + '%0A%0AReply%20to%3A%20' + encodeURIComponent(mail);
+                    return;
+                }
+                try {
+                    const res = await fetch(action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+                    if (res.ok) { wrap.style.display = 'none'; ok.style.display = 'block'; }
+                    else { form.submit(); }
+                } catch { form.submit(); }
+            });
+        }
+    </script>
+</body>
 </html>
 
 

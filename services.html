@@ -3,96 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - GS Flooring</title>
+
+    <!-- Primary SEO -->
+    <title>Flooring Services — GS Flooring | Worcestershire</title>
+    <meta name="description" content="GS Flooring offers professional hardwood, LVT, Amtico, Karndean, carpet, vinyl, and laminate installation across Worcestershire. Supply-and-fit or labour-only.">
+    <meta name="keywords" content="flooring services Worcestershire, hardwood installation, LVT fitting, Amtico installer, Karndean fitter, carpet fitting, vinyl flooring, floor repair Worcestershire">
+    <meta name="author" content="Gary Stephenson, GS Flooring">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gsflooring.github.io/services.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gsflooring.github.io/services.html">
+    <meta property="og:title" content="Flooring Services — GS Flooring">
+    <meta property="og:description" content="Professional hardwood, LVT, Amtico, Karndean, carpet, vinyl, and laminate installation across Worcestershire.">
+    <meta property="og:site_name" content="GS Flooring">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Flooring Services — GS Flooring">
+    <meta name="twitter:description" content="Expert flooring installation across Worcestershire. Supply-and-fit or labour-only.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background Canvas -->
-    <canvas id="particleCanvas"></canvas>
 
-    <!-- Header Section -->
-    <header>
-        <h1>GS Flooring</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="section-label">What I Do</span>
+            <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4.5rem);">Expert Flooring <em>Services</em></h1>
+            <p class="section-desc">Supply-and-fit or labour-only — professional installation tailored to your project and budget.</p>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>My Services</h2>
-        <p>Professional flooring solutions tailored to your needs</p>
-    </section>
-
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>What I Offer</h2>
-            <p>I provide comprehensive flooring services including installation, repair, and maintenance</p>
-            
-            <!-- Services Grid -->
-            <div class="products">
-                <!-- Hardwood Installation -->
-                <div class="product-card">
+    <!-- Services Grid -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Installation Services</span>
+            <h2 class="section-title">What I <em>Specialise In</em></h2>
+            <p class="section-desc">From classic hardwood to modern LVT patterns, I bring the same meticulous approach to every installation.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🪵</div>
                     <h3>Hardwood Installation</h3>
-                    <p>Expert installation of premium hardwood flooring with precision and care</p>
+                    <p>Solid and engineered hardwood laid with precision. Sanding, finishing, and repairs also available for existing hardwood floors.</p>
                 </div>
-                
-                <!-- Laminate Services -->
-                <div class="product-card">
-                    <h3>Laminate Services</h3>
-                    <p>Professional laminate installation and maintenance for durability</p>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Amtico &amp; Karndean (LVT)</h3>
+                    <p>Expert precision-cutting and laying of luxury vinyl tile products. Intricate patterns, borders, and feature designs all undertaken.</p>
                 </div>
-
-                <div class="product-card">
+                <div class="card">
+                    <div class="card-icon">💧</div>
                     <h3>Vinyl Installation</h3>
-                    <p>Waterproof, durable, and stunning vinyl options</p>
+                    <p>Waterproof, durable, and low-maintenance vinyl sheet and plank flooring — ideal for kitchens, bathrooms, and utility rooms.</p>
                 </div>
-                
-                <!-- Tile Installation -->
-                <div class="product-card">
-                    <h3>Amtico & Karndean</h3>
-                    <p>Precise LVT laying for any room</p>
+                <div class="card">
+                    <div class="card-icon">🧵</div>
+                    <h3>Carpet Fitting</h3>
+                    <p>Professional carpet fitting across all types: Saxony, Berber, loop pile, and more. Gripper rods, underlay, and edging all included.</p>
                 </div>
-                
-                <!-- Carpet Installation -->
-                <div class="product-card">
-                    <h3>Carpet Installation</h3>
-                    <p>Quality carpet installation that enhances comfort and aesthetics</p>
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Laminate Flooring</h3>
+                    <p>Fast, clean, and affordable laminate installation. Ideal for high-traffic areas where durability meets good looks.</p>
                 </div>
-                
-                <!-- Floor Repair -->
-                <div class="product-card">
-                    <h3>Floor Repair</h3>
-                    <p>Expert repair services to restore damaged flooring to like-new condition</p>
+                <div class="card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Screed &amp; Floor Prep</h3>
+                    <p>Cement screed levelling and floor preparation to achieve a perfect sub-floor — the critical foundation for a flawless finish.</p>
                 </div>
-                
-                <!-- Maintenance -->
-                <div class="product-card">
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Floor Repairs</h3>
+                    <p>Squeaky boards, damaged tiles, worn carpet — I diagnose and repair all types of flooring issues to a like-new standard.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📦</div>
                     <h3>Material Sourcing</h3>
-                    <p>I can supply materials if needed, or I am happy to work with self-sourced materials</p>
+                    <p>I can supply all materials through trusted trade accounts, or happily work with materials you've already purchased yourself.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 GS Flooring. All rights reserved.</p>
+    <!-- Process -->
+    <section class="section section-alt">
+        <div class="container">
+            <span class="section-label">The Process</span>
+            <h2 class="section-title">From Enquiry to <em>Finished Floor</em></h2>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h4>Get in Touch</h4>
+                    <p>Call or use the contact form. Describe your project and I'll arrange a convenient time to visit.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h4>Survey &amp; Quote</h4>
+                    <p>I measure the space, assess the sub-floor, and provide a detailed written quote at no cost.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h4>Materials</h4>
+                    <p>Choose from trade-sourced materials I supply, or provide your own. Either way, I'll ensure the product is right.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <h4>Installation</h4>
+                    <p>On the agreed date, I complete the installation to the highest standard, leaving your home clean and tidy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supply vs Fit -->
+    <section class="section">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <span class="section-label">Flexible Options</span>
+                    <h2 class="section-title">Supply &amp; Fit <em>or</em> Labour Only</h2>
+                    <p class="section-desc">I offer complete flexibility. Whether you've already purchased flooring and need a professional fitter, or you'd prefer me to handle everything end-to-end — the choice is entirely yours.</p>
+                    <ul class="values-list" style="margin-top:28px;">
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">Supply &amp; Fit</span>
+                                <span class="v-desc">I source premium materials through trade accounts and complete the full installation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">Labour Only</span>
+                                <span class="v-desc">Already have your materials? I'll install them with the same level of care and precision.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <span class="v-title">Residential &amp; Commercial</span>
+                                <span class="v-desc">Equally experienced in homes, offices, retail spaces, and hospitality environments.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quote-box">
+                    <blockquote>"The preparation and sub-floor work is just as important as the floor itself. Get it right underneath, and the top will look stunning for years to come."</blockquote>
+                    <span class="quote-source">&mdash; Gary Stephenson, GS Flooring</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Get Started</span>
+            <h2 class="section-title">Request a <em>Free Quote</em></h2>
+            <p class="section-desc" style="margin:0 auto 36px;">No obligation, no pressure. Just honest advice and a clear price for your project.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+                <a href="tel:07890484465" class="btn btn-outline">07890 484465</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+                <p>Professional flooring installation across Worcestershire and beyond. Quality craftsmanship, honest service.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <address>
+                    Upton upon Severn<br>
+                    Worcestershire<br>
+                    <a href="tel:07890484465">07890 484465</a><br>
+                    <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 GS Flooring. All rights reserved.</span>
+            <span>Upton upon Severn, Worcestershire</span>
+        </div>
     </footer>
-    
-    <!-- Navigation Bar Script -->
-    <script src="navbar.js"></script>
-    
-    <!-- Particle Animation Script -->
-    <script src="particles.js"></script>
-</body>
 
+    <script src="navbar.js"></script>
+</body>
 </html>
+
 
 
