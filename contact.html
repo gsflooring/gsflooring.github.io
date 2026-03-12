@@ -105,9 +105,11 @@
                         <h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--text);margin-bottom:8px;">Send a Message</h3>
                         <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:28px;">I typically respond within a few hours. All quotes are free and completely no-obligation.</p>
 
-                        <!-- To activate: replace YOUR_FORM_ID with your Formspree endpoint -->
-                        <!-- Sign up free at https://formspree.io to get your form ID -->
-                        <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                        <!-- Web3Forms endpoint -->
+                        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                            <input type="hidden" name="access_key" value="7cf9a164-ebf9-4965-a566-306c0b2a981e">
+                            <input type="hidden" name="subject" value="New Flooring Enquiry — GS Flooring">
+                            <input type="hidden" name="redirect" value="false">
 
                             <div class="form-row">
                                 <div class="form-group">
@@ -212,30 +214,7 @@
     </footer>
 
     <script src="navbar.js"></script>
-    <script>
-        const form = document.getElementById('quoteForm');
-        const wrap = document.getElementById('contactFormWrap');
-        const ok   = document.getElementById('formSuccess');
-        if (form) {
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const action = form.action;
-                if (action.includes('YOUR_FORM_ID')) {
-                    // Fallback: open default mail client
-                    const name = (document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value).trim();
-                    const msg  = document.getElementById('message').value;
-                    const mail = document.getElementById('email').value;
-                    window.location.href = 'mailto:garystephenson2007@gmail.com?subject=' + encodeURIComponent('Flooring Enquiry from ' + name) + '&body=' + encodeURIComponent(msg) + '%0A%0AReply%20to%3A%20' + encodeURIComponent(mail);
-                    return;
-                }
-                try {
-                    const res = await fetch(action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-                    if (res.ok) { wrap.style.display = 'none'; ok.style.display = 'block'; }
-                    else { form.submit(); }
-                } catch { form.submit(); }
-            });
-        }
-    </script>
+    <script src="contact.js"></script>
 </body>
 </html>
 
