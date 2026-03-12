@@ -44,11 +44,12 @@
                 item.setAttribute('aria-label', 'View project photo ' + (i + 1));
 
                 var el = document.createElement('img');
-                el.src     = imgSrc;
                 el.alt     = 'GS Flooring project — photo ' + (i + 1);
-                el.loading = 'lazy';
                 el.decoding = 'async';
+                // Attach listener BEFORE setting src so cached images don't miss the event
                 el.addEventListener('load', function () { el.classList.add('loaded'); });
+                if (el.complete) el.classList.add('loaded'); // already cached
+                el.src = imgSrc;
 
                 item.appendChild(el);
                 item.addEventListener('click',   function () { openLightbox(i); });
@@ -68,7 +69,7 @@
     function openLightbox(index) {
         current     = index;
         lbImg.src   = '';
-        lbImg.src   = images[current].src;
+        lbImg.src   = images[current];
         updateCount();
         lb.classList.add('open');
         lb.setAttribute('aria-hidden', 'false');
@@ -86,14 +87,14 @@
     function showPrev() {
         current = (current - 1 + images.length) % images.length;
         lbImg.src = '';
-        lbImg.src = images[current].src;
+        lbImg.src = images[current];
         updateCount();
     }
 
     function showNext() {
         current = (current + 1) % images.length;
         lbImg.src = '';
-        lbImg.src = images[current].src;
+        lbImg.src = images[current];
         updateCount();
     }
 
