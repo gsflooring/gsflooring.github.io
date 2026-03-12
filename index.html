@@ -23,6 +23,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GS Flooring — Professional Flooring Installation">
     <meta name="twitter:description" content="Professional flooring installation across Worcestershire. Free quotes available. Call 07890 484465.">
+    <meta name="twitter:image" content="https://gsflooring.github.io/public/logo.jpg">
+    <meta property="og:image" content="https://gsflooring.github.io/public/logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="public/logo.jpg">
+    <link rel="apple-touch-icon" href="public/logo.jpg">
 
     <!-- Local Business Structured Data -->
     <script type="application/ld+json">
@@ -194,8 +200,26 @@
         </div>
     </section>
 
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <span class="section-label">Our Work</span>
+            <h2 class="section-title">Recent <em>Projects</em></h2>
+            <p class="section-desc">A selection of completed flooring installations across Worcestershire. Click any photo to view full resolution.</p>
+            <!-- Skeletons shown while JS fetches the image list -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
-    <section class="section">
+    <section class="section section-alt">
         <div class="container" style="text-align:center;">
             <span class="section-label">Ready to Start?</span>
             <h2 class="section-title">Get Your Free, No-Obligation <em>Quote Today</em></h2>
@@ -236,7 +260,17 @@
         </div>
     </footer>
 
+    <!-- Lightbox overlay -->
+    <div id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project photo viewer">
+        <button id="lbClose" aria-label="Close photo viewer">&times;</button>
+        <button id="lbPrev"  aria-label="Previous photo">&#8249;</button>
+        <img id="lbImg" src="" alt="GS Flooring project photo — full resolution">
+        <button id="lbNext"  aria-label="Next photo">&#8250;</button>
+        <span id="lbCount"></span>
+    </div>
+
     <script src="navbar.js"></script>
+    <script src="gallery.js"></script>
 </body>
 </html>
 

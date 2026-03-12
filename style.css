@@ -444,3 +444,135 @@ a:hover { color: var(--gold-light); }
     .cards-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== GALLERY ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 56px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gold-border);
+    aspect-ratio: 4 / 3;
+    cursor: pointer;
+    background: var(--surface-2);
+    transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .5s var(--ease), opacity .4s ease;
+    opacity: 0;
+}
+.gallery-item img.loaded { opacity: 1; }
+.gallery-item:hover { border-color: rgba(200,146,58,.55); box-shadow: var(--shadow-gold); }
+.gallery-item:hover img { transform: scale(1.06); }
+/* Zoom icon on hover */
+.gallery-item::after {
+    content: '⊕';
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: var(--gold);
+    background: rgba(13,13,14,.45);
+    opacity: 0;
+    transition: opacity var(--t) var(--ease);
+    pointer-events: none;
+}
+.gallery-item:hover::after { opacity: 1; }
+/* Skeleton loader */
+.gallery-skeleton {
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface-3) 50%, var(--surface-2) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+.gallery-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px;
+    font-size: .95rem;
+}
+
+/* ===== LIGHTBOX ===== */
+#lightbox {
+    position: fixed; inset: 0;
+    z-index: 2000;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(8, 8, 9, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s var(--ease);
+}
+#lightbox.open { opacity: 1; pointer-events: all; }
+#lbImg {
+    max-width: min(90vw, 1200px);
+    max-height: 85vh;
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gold-border);
+    box-shadow: 0 24px 80px rgba(0,0,0,.8);
+    display: block;
+    transition: opacity .25s ease;
+}
+/* Lightbox buttons shared */
+#lbClose, #lbPrev, #lbNext {
+    position: fixed;
+    background: rgba(13,13,14,.75);
+    border: 1px solid var(--gold-border);
+    color: var(--text);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--t) var(--ease), color var(--t) var(--ease), border-color var(--t) var(--ease);
+    z-index: 2001;
+    font-family: var(--sans);
+    line-height: 1;
+}
+#lbClose, #lbPrev, #lbNext { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+#lbClose:hover, #lbPrev:hover, #lbNext:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg);
+}
+#lbClose {
+    top: 20px; right: 20px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+#lbPrev, #lbNext {
+    top: 50%; transform: translateY(-50%);
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+}
+#lbPrev { left: 20px; }
+#lbNext { right: 20px; }
+#lbCount {
+    position: fixed;
+    bottom: 24px; left: 50%; transform: translateX(-50%);
+    font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-muted);
+    background: rgba(13,13,14,.7);
+    padding: 6px 18px; border-radius: 50px;
+    border: 1px solid var(--gold-border);
+    pointer-events: none;
+    z-index: 2001;
+}
+@media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+    #lbPrev { left: 8px; }
+    #lbNext { right: 8px; }
+    #lbImg { max-height: 70vh; }
+}
+
