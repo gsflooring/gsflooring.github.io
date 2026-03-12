@@ -63,6 +63,7 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -200,21 +201,13 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="section" id="gallery">
-        <div class="container">
+    <!-- Gallery Teaser -->
+    <section class="section">
+        <div class="container" style="text-align:center;">
             <span class="section-label">Our Work</span>
-            <h2 class="section-title">Recent <em>Projects</em></h2>
-            <p class="section-desc">A selection of completed flooring installations across Worcestershire. Click any photo to view full resolution.</p>
-            <!-- Skeletons shown while JS fetches the image list -->
-            <div class="gallery-grid" id="galleryGrid">
-                <div class="gallery-skeleton"></div>
-                <div class="gallery-skeleton"></div>
-                <div class="gallery-skeleton"></div>
-                <div class="gallery-skeleton"></div>
-                <div class="gallery-skeleton"></div>
-                <div class="gallery-skeleton"></div>
-            </div>
+            <h2 class="section-title">See Our <em>Projects</em></h2>
+            <p class="section-desc" style="margin: 0 auto 36px;">Browse completed flooring installations across Worcestershire — hardwood, LVT, carpet, vinyl and more.</p>
+            <a href="gallery.html" class="btn btn-primary">View Gallery</a>
         </div>
     </section>
 
@@ -241,6 +234,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -260,17 +254,7 @@
         </div>
     </footer>
 
-    <!-- Lightbox overlay -->
-    <div id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project photo viewer">
-        <button id="lbClose" aria-label="Close photo viewer">&times;</button>
-        <button id="lbPrev"  aria-label="Previous photo">&#8249;</button>
-        <img id="lbImg" src="" alt="GS Flooring project photo — full resolution">
-        <button id="lbNext"  aria-label="Next photo">&#8250;</button>
-        <span id="lbCount"></span>
-    </div>
-
     <script src="navbar.js"></script>
-    <script src="gallery.js"></script>
 </body>
 </html>
 

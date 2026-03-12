@@ -1,8 +1,8 @@
-/* GS Flooring — Gallery (dynamic via GitHub Contents API) */
+/* GS Flooring — Gallery (sequential probe: public/photo1.jpeg, photo2.jpeg …) */
 
 (function () {
-    const REPO_API = 'https://api.github.com/repos/gsflooring/gsflooring.github.io/contents/public';
-    const EXCLUDE  = ['logo.jpg', 'demo.txt'];
+    const BASE = 'public/photo';
+    const EXT  = '.jpeg';
 
     const grid  = document.getElementById('galleryGrid');
     if (!grid) return;
@@ -14,22 +14,21 @@
     const lbNext  = document.getElementById('lbNext');
     const lbCount = document.getElementById('lbCount');
 
-    let images  = [];
+    let images  = [];   // array of src strings
     let current = 0;
 
-    /* ── Fetch image list ── */
-    fetch(REPO_API, { headers: { 'Accept': 'application/vnd.github.v3+json' } })
-        .then(function (r) { return r.json(); })
-        .then(function (files) {
-            images = files.filter(function (f) {
-                return f.type === 'file'
-                    && !EXCLUDE.includes(f.name)
-                    && /\.(jpe?g|png|webp|gif)$/i.test(f.name);
-            }).map(function (f) {
-                return { src: f.download_url, name: f.name };
-            });
+    /* ── Sequential image probe ── */
+    function probe(index) {
+        var src  = BASE + index + EXT;
+        var test = new Image();
 
-            // Remove skeleton placeholders
+        test.onload = function () {
+            images.push(src);
+            probe(index + 1);          // try the next one
+        };
+
+        test.onerror = function () {
+            // This index doesn't exist — we're done loading
             grid.innerHTML = '';
 
             if (images.length === 0) {
@@ -37,28 +36,33 @@
                 return;
             }
 
-            images.forEach(function (img, i) {
-                const item = document.createElement('div');
+            images.forEach(function (imgSrc, i) {
+                var item = document.createElement('div');
                 item.className = 'gallery-item';
                 item.setAttribute('role', 'button');
                 item.setAttribute('tabindex', '0');
                 item.setAttribute('aria-label', 'View project photo ' + (i + 1));
 
-                const el = document.createElement('img');
-                el.src     = img.src;
+                var el = document.createElement('img');
+                el.src     = imgSrc;
                 el.alt     = 'GS Flooring project — photo ' + (i + 1);
                 el.loading = 'lazy';
                 el.decoding = 'async';
+                el.addEventListener('load', function () { el.classList.add('loaded'); });
 
                 item.appendChild(el);
                 item.addEventListener('click',   function () { openLightbox(i); });
-                item.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') openLightbox(i); });
+                item.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') openLightbox(i);
+                });
                 grid.appendChild(item);
             });
-        })
-        .catch(function () {
-            grid.innerHTML = '<p class="gallery-empty">Gallery unavailable — please check back soon.</p>';
-        });
+        };
+
+        test.src = src;
+    }
+
+    probe(1);   // start from photo1.jpeg
 
     /* ── Lightbox controls ── */
     function openLightbox(index) {

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Gallery — GS Flooring | Project Photos | Worcestershire</title>
+    <meta name="description" content="Browse completed flooring projects by GS Flooring across Worcestershire. Hardwood, LVT, Amtico, Karndean, carpet and vinyl installations.">
+    <meta name="keywords" content="flooring gallery, flooring photos Worcestershire, GS Flooring projects, hardwood floor photos, LVT installation photos">
+    <meta name="author" content="Gary Stephenson, GS Flooring">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gsflooring.github.io/gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gsflooring.github.io/gallery.html">
+    <meta property="og:title" content="Gallery — GS Flooring Project Photos">
+    <meta property="og:description" content="Browse completed flooring installations across Worcestershire by GS Flooring.">
+    <meta property="og:site_name" content="GS Flooring">
+    <meta property="og:image" content="https://gsflooring.github.io/public/logo.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery — GS Flooring">
+    <meta name="twitter:description" content="Browse completed flooring installations across Worcestershire.">
+    <meta name="twitter:image" content="https://gsflooring.github.io/public/logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="public/logo.jpg">
+    <link rel="apple-touch-icon" href="public/logo.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="section-label">Our Work</span>
+            <h1 class="section-title" style="font-size: clamp(2.5rem,5vw,4.5rem);">Recent <em>Projects</em></h1>
+            <p class="section-desc">A selection of completed flooring installations across Worcestershire — click any photo to view full resolution.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+                <div class="gallery-skeleton"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Like What You See?</span>
+            <h2 class="section-title">Get a Free, No-Obligation <em>Quote Today</em></h2>
+            <p class="section-desc" style="margin: 0 auto 36px;">Every project is different. Get in touch and I'll help you find the perfect flooring solution for your home or business.</p>
+            <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">GS <span>Flooring</span></a>
+                <p>Professional flooring installation across Worcestershire and beyond. Quality craftsmanship, honest service.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <address>
+                    Upton upon Severn<br>
+                    Worcestershire<br>
+                    <a href="tel:07890484465">07890 484465</a><br>
+                    <a href="mailto:garystephenson2007@gmail.com">garystephenson2007@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 GS Flooring. All rights reserved.</span>
+            <span>Upton upon Severn, Worcestershire</span>
+        </div>
+    </footer>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project photo viewer">
+        <button id="lbClose" aria-label="Close photo viewer">&times;</button>
+        <button id="lbPrev"  aria-label="Previous photo">&#8249;</button>
+        <img id="lbImg" src="" alt="GS Flooring project photo — full resolution">
+        <button id="lbNext"  aria-label="Next photo">&#8250;</button>
+        <span id="lbCount"></span>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
